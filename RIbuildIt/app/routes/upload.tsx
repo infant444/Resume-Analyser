@@ -69,45 +69,7 @@ export default function Uploader() {
         console.log(data);
         navigate(`/resume/${uuid}`);
     }
-//     setProcessed(true);
-//     setScanStatus("uploading the file ...");
-//     const uploadedFile:any=await fs.upload([file]);
-//     if(!uploadedFile) return setScanStatus('Error:Failed to upload file');
-//     setScanStatus("Converting to images... ")
-//     const imageFit= await convertPdfToImage(file);
-//     if(!imageFit.file) return setScanStatus('Error:Failed to Convert image');
-//     setScanStatus("Uploading to images... ")
-//     const uploadedImage:any=await fs.upload([imageFit.file]);
-//     if(!uploadedImage) return setScanStatus('Error:Failed to upload Image');
 
-//     setScanStatus("Preparing data...");
-//     const uuid=generateUUID();
-//     const data={
-//       id:uuid,
-//       resumePath:uploadedFile.path,
-//       imagePath: uploadedFile.path,
-//       companyName,
-//       jobTitle,
-//       jobDescription,
-//       feedback:""
-//     }
-//     await kv.set(`resume:${uuid}`,JSON.stringify(data));
-//     setScanStatus("Analyzing...");
-//      const feedback = await ai.feedback(
-//             uploadedFile.path,
-//             prepareInstructions({jobTitle, jobDescription })
-//         )
-//          if (!feedback) return setScanStatus('Error: Failed to analyze resume');
-//          const feedbackText = typeof feedback.message.content === 'string'
-//             ? feedback.message.content
-//             : feedback.message.content[0].text;
-
-//         data.feedback = JSON.parse(feedbackText);
-//         await kv.set(`resume:${uuid}`, JSON.stringify(data));
-//         setScanStatus('Analysis complete, redirecting...');
-//         console.log(data);
-//         navigate(`/resume/${uuid}`);
-// }
   const handleSubmit=(e:FormEvent<HTMLFormElement>)=>{
     e.preventDefault();
     const form:HTMLFormElement|null=e.currentTarget.closest('form');
@@ -130,8 +92,9 @@ export default function Uploader() {
           <h1>Smart feedback for your Job</h1>
           {isProcessed ? (
             <>
-              <img src="images/resume-scan.gif" alt="" />
               <h2>{scanStatus}</h2>
+
+              <img src="images/resume-scan.gif" alt="" />
             </>
           ) : (
             <h2>Drop your resume for ATS Score and improvement tips</h2>

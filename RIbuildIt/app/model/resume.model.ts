@@ -6,7 +6,7 @@ export class Resume{
     resumePath!:string;
     feedback!:Feedback;
 }
-class Feedback{
+export class Feedback{
     overallScore!:number;
       ATS!: FeedbackScore;
       toneAndStyle!: FeedbackScore;
@@ -19,7 +19,8 @@ interface FeedbackScore{
     score:number,
         tips:feedbackTips[] ,
 }
-interface feedbackTips{
+export interface feedbackTips{
     type:'good'|'improve';
     tip:string;
+    explanation:string;
 }
