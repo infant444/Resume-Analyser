@@ -6,7 +6,7 @@ import Summary from '~/components/summary'
 import { usePuterStore } from '~/lib/puter'
 import type { Feedback } from '~/model/resume.model'
 export const meta=()=>([
-    {title:"RIBuildIt | Review"},
+    {title:"RI Score | Review"},
     {name:"Description", content:"Detailed overview of your Resume"}
 ])
 

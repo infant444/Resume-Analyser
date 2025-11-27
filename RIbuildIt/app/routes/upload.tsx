@@ -104,15 +104,15 @@ export default function Uploader() {
             <form id="upload-form" onSubmit={handleSubmit} className="flex flex-col gap-4 p-[1rem]">
                 <div className="form-div">
                     <label htmlFor="company">Company Name</label>
-                    <input type="text" name="company" id="company" placeholder="Company Name" required/>
+                    <input type="text" name="company" id="company" placeholder="Company Name" />
                 </div>
                  <div className="form-div">
                     <label htmlFor="job-title">Job Title</label>
-                    <input type="text" name="job-title" id="job-title" placeholder="Job Title" required/>
+                    <input type="text" name="job-title" id="job-title" placeholder="Job Title" />
                 </div>
                 <div className="form-div">
                     <label htmlFor="job-description">Job Description</label>
-                    <textarea rows={5} name="job-description" id="job-description" placeholder="Job Description" required></textarea>
+                    <textarea rows={5} name="job-description" id="job-description" placeholder="Job Description" ></textarea>
                 </div>
                 <div className="form-div">
                     <label htmlFor="uploader">Upload Resume</label>

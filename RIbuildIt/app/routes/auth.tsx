@@ -5,7 +5,7 @@ import { useLocation, useNavigate } from "react-router";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "RIBuildIt | Auth" },
+    { title: "RI Score| Auth" },
     { name: "description", content: "To login your account" },
   ];
 }

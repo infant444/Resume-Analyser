@@ -5,7 +5,7 @@ const Navbar=()=> {
   return (
     <div className="navbar">
         <Link to="/" >
-        <p className="text-2xl font-bold text-gradient">RI Build It</p>
+        <p className="text-2xl font-bold text-gradient">RI Score</p>
         </Link>
         
         <button className="primary-button" onClick={()=>{nav('/upload')}}>Upload Resume</button>
